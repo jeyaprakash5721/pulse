@@ -11,7 +11,7 @@ export function ChannelDonut({ channels }: { channels: ChannelShare[] }) {
   const offsets = lengths.map((_, i) => lengths.slice(0, i).reduce((a, b) => a + b, 0));
 
   return (
-    <div className="flex flex-col items-center gap-6 sm:flex-row lg:flex-col xl:flex-row">
+    <div className="flex flex-col items-center gap-6 sm:flex-row lg:flex-col xl:flex-row xl:flex-wrap xl:justify-center">
       <div className="relative size-36 shrink-0">
         <svg viewBox="0 0 128 128" className="size-full -rotate-90" aria-hidden="true">
           {channels.map((c, i) => {
